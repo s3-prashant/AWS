@@ -11,11 +11,11 @@ phases:
     build:
         commands:
           - echo Build started on `date`
-          - mvn -s nextwork-web-project/settings.xml compile
+          - mvn -s AWS/nextwork-web-project/settings.xml compile
    post_build:
     commands:
       - echo Build completed on `date`
-      - mvn -s nextwork-web-project/settings.xml package
+      - mvn -s AWS/nextwork-web-project/settings.xml package
 artifacts:
     files:
         - target/nextwork-web-project.war
