@@ -16,7 +16,6 @@ phases:
     post_build:
         commands:
           - echo Build completed on `date`
-          - cd nextwork-web-project/
           - mvn -s settings.xml package
 artifacts:
     files:
