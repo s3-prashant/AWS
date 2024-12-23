@@ -2,18 +2,18 @@ version: 0.0
 os: linux
 files:
     - source: nextwork-web-project/target/nextwork-web-project.war
-        destination: /usr/share/tomcat/webapps/
-        hooks:
-            BeforeInstall:
-                  - location: nextwork-web-project/scripts/install_dependencies.sh
-                        timeout: 300
-                              runas: root
-                                ApplicationStart:
-                                      - location: nextwork-web-project/scripts/start_server.sh
-                                            timeout: 300
-                                                  runas: root
-                                                    ApplicationStop:
-                                                          - location: nextwork-web-project/scripts/stop_server.sh
-                                                                timeout: 300
-                                                                      runas: root
-                                                                      :
+      destination: /usr/share/tomcat/webapps/
+hooks:
+    BeforeInstall:
+        - location: nextwork-web-project/scripts/install_dependencies.sh
+          timeout: 300
+          runas: root
+    ApplicationStart:
+        - location: nextwork-web-project/scripts/start_server.sh
+          timeout: 300
+          runas: root
+    ApplicationStop:
+          - location: nextwork-web-project/scripts/stop_server.sh
+            timeout: 300
+            runas: root
+                      
