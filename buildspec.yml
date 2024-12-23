@@ -19,6 +19,6 @@ phases:
           - mvn -s settings.xml package
 artifacts:
     files:
-        - nextwork-web-project/nextwork-web-project.war
+        - target/nextwork-web-project.war
     discard-paths: no
 
